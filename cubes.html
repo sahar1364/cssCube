@@ -1,0 +1,165 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="cubes.css"></link>
+    <script src="cubes.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function() {
+            var div = document.getElementById("containerId");
+            div.onmousedown = function(e) {
+                Rotate.mouseDownEvent(e);
+            };
+            div.onmousemove = function(e) {
+                Rotate.mouseMoveEvent(e, div);
+            };
+            div.onmouseup = function(e) {
+                Rotate.mouseUpEvent(e);
+            };
+        }   
+    </script>
+    <div class="container" id="containerId">
+        
+        
+        
+        <div class="cube">
+            <div class="front-outer-cube">
+                <div class="firt-row">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+                <div class="second-row">
+                    <div class="split-horizontal"></div>
+                    <div class="split-small-square"></div>
+                    <div class="split-horizontal"></div>
+                </div>
+                <div class="third-row">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+            </div>
+
+            <div class="back-outer-cube">
+                 <div class="firt-row-back">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+                <div class="second-row-back">
+                    <div class="split-horizontal"></div>
+                    <div class="split-small-square"></div>
+                    <div class="split-horizontal"></div>
+                </div>
+                <div class="third-row-back">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>           
+            </div>  
+            
+             <div class="right-outer-cube">
+                 <div class="firt-row-right">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+                <div class="second-row-right">
+                    <div class="split-horizontal"></div>
+                    <div class="split-small-square"></div>
+                    <div class="split-horizontal"></div>
+                </div>
+                <div class="third-row-right">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>           
+            </div>
+            
+            <div class="left-outer-cube">
+                 <div class="firt-row-left">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+                <div class="second-row-left">
+                    <div class="split-horizontal"></div>
+                    <div class="split-small-square"></div>
+                    <div class="split-horizontal"></div>
+                </div>
+                <div class="third-row-left">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>           
+            </div> 
+            <div class="bottom-outer-cube">
+                 <div class="firt-row-bottom">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>
+                <div class="second-row-bottom">
+                    <div class="split-horizontal"></div>
+                    <div class="split-small-square"></div>
+                    <div class="split-horizontal"></div>
+                </div>
+                <div class="third-row-bottom">
+                    <div class="split-big-square"></div>
+                    <div class="split-vertical"></div>
+                    <div class="split-big-square"></div>
+                </div>           
+            </div>
+            <div class="edge bottom-outer-cube"></div> 
+            <div class="edge top-outer-cube"></div> 
+
+            
+            <div class="cross">
+            <div class="upper">
+                <div class="edge-vertical-big front-in-vertical"></div>
+                <div class="edge-vertical-big back-in-vertical"></div>
+                <div class="edge-vertical-big right-in-vertical"></div>
+                <div class="edge-vertical-big left-in-vertical"></div>
+                <!--<div class="edge-square bottom-in-vertical"></div> -->
+                <div class="edge-square top-in-vertical"></div>           
+            </div>
+            <div class="lower">
+                <div class="edge-vertical-big front-in-vertical"></div>
+                <div class="edge-vertical-big back-in-vertical"></div>
+                <div class="edge-vertical-big right-in-vertical"></div>
+                <div class="edge-vertical-big left-in-vertical"></div>
+                <div class="edge-square bottom-in-vertical"></div>
+               <!-- <div class="edge-square top-in-vertical"></div>   -->        
+            </div>
+
+            <div class="left">
+                <div class="edge-horizontal-big front-in-horizontal"></div>
+                <div class="edge-horizontal-big back-in-horizontal"></div>
+                <div class="edge-horizontal-big bottom-in-horizontal"></div>
+                <div class="edge-horizontal-big top-in-horizontal"></div>
+               <!-- <div class="edge-square right-in-horizontal"></div> -->
+                <div class="edge-square left-in-horizontal"></div>         
+            </div>
+            <div class="right">
+                <div class="edge-horizontal-big front-in-horizontal"></div>
+                <div class="edge-horizontal-big back-in-horizontal"></div>
+                <div class="edge-horizontal-big bottom-in-horizontal"></div>
+                <div class="edge-horizontal-big top-in-horizontal"></div>
+                <div class="edge-square right-in-horizontal"></div>
+             <!--   <div class="edge-square left-in-horizontal"></div>  -->         
+            </div> 
+            <div class="middle">
+                <div class="edge-square-invisible front-in-horizontal"></div>
+                <div class="edge-square-invisible back-in-horizontal"></div>           
+            </div> 
+        </div>
+            
+            
+            
+            
+            
+        </div> 
+    </div>
+</body>
+</html>

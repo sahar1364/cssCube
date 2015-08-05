@@ -12,187 +12,56 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-    transform: rotateX(45deg) rotateY(55deg) rotateZ(75deg);
+   /* transform: rotateX(145deg) rotateY(20deg) rotateZ(25deg);*/
 }
 
-.firt-row {
-    border-top: 2px solid red;
+.first-row {
+/*    border-top: 2px solid red;
     border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    display: block;
+    border-right: 2px solid red;*/
+    width: 180px;
+    height: 70px;
     position: absolute;
-  
+    background-color: lightgrey;
+    opacity: 0.5;
 }
 
-.second-row {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
+.second-row-left {
+  /*  border-left: 2px solid red;
+    border-right: 2px solid red;*/
+    width: 70px;
+    height: 40px;
     position: absolute;
-    display: block;
-    transform: translateY(61px);
+    background-color: lightgrey;
+    transform:  translateY(71px) translateX(0px);
+    opacity: 0.5;
+ 
+}
+
+.second-row-right {
+/*    border-left: 2px solid red;
+    border-right: 2px solid red;*/
+    width: 70px;
+    height: 40px;
+    background-color: lightgrey;
+    position: absolute;
+    transform: translateY(71px) translateX(110px);
+    opacity: 0.5;
  
 }
 
 .third-row {
-    border-bottom: 2px solid red;
+/*    border-bottom: 2px solid red;
     border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    position: absolute;
-    display: block;
-    transform: translateY(122px);
-  
-}
-
-.firt-row-back {
-    border-top: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    display: block;
-    position: absolute;
-    transform: translateY(-183px);
-  
-}
-
-.second-row-back {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    position: absolute;
-    display: block;
-    transform: translateY(-122px);
- 
-}
-
-.third-row-back {
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    position: absolute;
-    display: block;
-    transform: translateY(-61px);
-  
-}
-
-.firt-row-right {
-    border-top: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    display: block;
-    position: absolute;
-    transform:  rotateY(  90deg ) translateZ( 92px );
-  
-}
-
-.second-row-right {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    border-bottom: 2px solid red;
-    width: 184;
-    height: 61;
-    position: absolute;
-    display: block;
-    transform: rotateY(  90deg ) translateZ( 92px ) translateY(122px) ;
- 
-}
-
-.third-row-right {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    position: absolute;
-    display: block;
-    transform:  rotateY(  90deg ) translateZ( 92px ) translateY(61px);  
-}
-
-.firt-row-left {
-    border-top: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184;
-    height: 61;
-    background-color: red;
-    display: block;
-    position: absolute;
-    transform:  rotateY(  -90deg ) translateZ( 92px );
-  
-}
-
-.third-row-left {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    border-bottom: 2px solid red;
-    width: 184;
-    height: 61;
-     background-color: green;
-   position: absolute;
-    display: block;
-    transform: rotateY(  -90deg ) translateZ( 92px ) translateY(122px) ;
- 
-}
-
-.second-row-left {
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    width: 184px;
-    height: 61px;
-     background-color: yellow;
-    position: absolute;
-    display: block;
-    transform:  rotateY(  -90deg ) translateZ( 92px ) translateY(61px);  
-}
-
-
-.split-horizontal {
-    width: 70px;
-    height: 40px; 
-    display: inline-block;
-    position: absolute;
-        background-color: blue;
-
-}
-
-.split-vertical {
-    width: 40px;
+    border-right: 2px solid red;*/
+    width: 180px;
     height: 70px;
-        display: inline-block;
-        position: absolute;
-
-
+    position: absolute;
+    background-color: lightgrey;
+    transform: translateY(110px);
+    opacity: 0.5;
+  
 }
-
-.split-big-square {
-    width: 70px;
-    height: 70px;
-        display: inline-block;
-        position: absolute;
-
-
-
-}
-
-.split-small-square {
-    width: 40px;
-    height: 40px;
-        display: inline-block;
-        position: absolute;
-
-
-}
-
 
 .cross {
     width: 100%;
@@ -249,7 +118,8 @@
     height: 180px;
     display: block;
     position: absolute;
-    border: 2px solid black;   
+    background-color: lightgrey;
+    opacity: 0.5;
 }
 
 .edge-vertical-big {
@@ -258,7 +128,7 @@
     display: block;
     border: 1px solid red;
     position: absolute; 
-    background-color: aquamarine;
+    background-color: yellow;
 
 }
 
@@ -268,7 +138,7 @@
     display: block;
     border: 1px solid red;
     position: absolute;  
-    background-color: aquamarine;
+    background-color: yellow;
 
 }
 
@@ -278,7 +148,8 @@
     display: block;
     border: 1px solid red;
     position: absolute; 
-    background-color: aquamarine;
+    background-color: orange;
+    opacity: 0.2;
 }
 
 .edge-square-invisible {
@@ -286,7 +157,7 @@
     height: 40px;
     display: block;
     position: absolute;  
-    background-color: aquamarine;  
+    background-color: yellow;  
 }
 
 .top-in-vertical {
@@ -342,17 +213,25 @@
 }
 
 .top-outer-cube {
-    transform: rotateX(  90deg ) translateZ( 92px );
+    transform: translateZ( -94px ) translateX(0px) translateY(0px) rotateX(  90deg ); ;
 }
 
 .bottom-outer-cube {
-    transform: rotateX(  -90deg ) translateZ( 92px );
+    transform: translateZ( 94px ) translateX(0px) translateY(182px) rotateX(  -90deg ) ;
 }
 
 .left-outer-cube {  
+    transform:  translateZ(-98px) translateX(-21px) rotateY(90deg); 
 }
 
-.right-outer-cube {   
+.right-outer-cube {
+    transform:  translateZ(98px) translateX(-194px) rotateY(-90deg); 
+}
+
+.background-setting {
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 

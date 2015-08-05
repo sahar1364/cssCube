@@ -2,6 +2,7 @@ var Rotate = (function() {
    'use strict';
     var mouseDown = false;
     var start_x, start_y, end_x, end_y;
+    var div;
     
     return {    
         mouseDownEvent: function(e) {
@@ -22,6 +23,27 @@ var Rotate = (function() {
                 }
             }
 
+        },
+        
+        rotateY: function(div, angleInDegrees) {           
+            div.style.transform = "rotateY("+angleInDegrees+"deg)";    
+        },
+        
+        rotateZ: function(div, angleInDegrees) {           
+            div.style.transform = "rotateZ("+angleInDegrees+"deg)";    
+        },
+        
+        rotateX: function(div, angleInDegrees) {           
+            div.style.transform = "rotateX("+angleInDegrees+"deg)";    
+        },
+        
+        rotateLoop: function(div) {
+            for (var i=1; i < 361; i++) {
+                setTimeout(function() { 
+                    div.style.transform = "rotateY("+arguments[0]+"deg)";
+                    div.style.transform = "rotateX("+arguments[0]+"deg)";
+                 }, i*200, i); 
+            }
         },
         
         mouseUpEvent: function(e) {

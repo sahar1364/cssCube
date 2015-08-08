@@ -1,5 +1,9 @@
+body {
+  background-color: black; 
+  background: linear-gradient(to bottom right, #000, #222);
+}
+
 .container {
-    display: block;
     width: 200px;
     height: 200px;
     position: relative;
@@ -7,58 +11,70 @@
     padding: 100px;
 }
 
+@keyframes cubeRotation {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@-webkit-keyframes cubeRotation {
+    0% { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    100% { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
 .cube {
     width: 100%;
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
-   /* transform: rotateX(145deg) rotateY(20deg) rotateZ(25deg);*/
+    animation-name: cubeRotation;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    transform-origin: 25% 25%;
+    -webkit-transform-origin: 25% 25%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: cubeRotation;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
 }
 
 .first-row {
-/*    border-top: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;*/
     width: 180px;
     height: 70px;
     position: absolute;
-    background-color: lightgrey;
+    background-color: green;
     opacity: 0.5;
 }
 
 .second-row-left {
-  /*  border-left: 2px solid red;
-    border-right: 2px solid red;*/
     width: 70px;
     height: 40px;
     position: absolute;
-    background-color: lightgrey;
-    transform:  translateY(71px) translateX(0px);
+    background-color: black;
+    transform: translateY(70px);
+    -webkit-transform: translateY(70px);
     opacity: 0.5;
  
 }
 
 .second-row-right {
-/*    border-left: 2px solid red;
-    border-right: 2px solid red;*/
     width: 70px;
     height: 40px;
-    background-color: lightgrey;
+    background-color: black;
     position: absolute;
-    transform: translateY(71px) translateX(110px);
+    transform: translateY(70px) translateX(110px);
+    -webkit-transform: translateY(70px) translateX(110px);
     opacity: 0.5;
- 
 }
 
 .third-row {
-/*    border-bottom: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;*/
     width: 180px;
     height: 70px;
     position: absolute;
-    background-color: lightgrey;
+    background-color: greenyellow;
     transform: translateY(110px);
+    -webkit-transform: translateY(110px);
     opacity: 0.5;
   
 }
@@ -68,6 +84,7 @@
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .upper {
@@ -76,77 +93,75 @@
     padding-left: 70px;
     position: absolute;
     transform-style: preserve-3d;    
+    -webkit-transform-style: preserve-3d;    
 }
 
 .lower {
     width: 100%;
     height: 100%;
-    padding-top:110px;
+    padding-top: 110px;
     padding-left: 70px;
     position: absolute;
     transform-style: preserve-3d;    
+    -webkit-transform-style: preserve-3d;    
 }
 
 .left {
     width: 100%;
     height: 100%;
-    padding-top:70px;
+    padding-top: 70px;
     position: absolute;
     transform-style: preserve-3d;    
+    -webkit-transform-style: preserve-3d;    
 }
 
 .right {
     width: 100%;
     height: 100%;
-    padding-top:70px;
-    padding-left:110px;
+    padding-top: 70px;
+    padding-left: 110px;
     position: absolute;
     transform-style: preserve-3d;    
+    -webkit-transform-style: preserve-3d;    
 }
 
 .middle {
     width: 100%;
     height: 100%;
-    padding-top:70px;
-    padding-left:70px;
+    padding-top: 70px;
+    padding-left: 70px;
     position: absolute;
     transform-style: preserve-3d;     
+    -webkit-transform-style: preserve-3d;     
 }
 
 .edge {
     width: 180px;
     height: 180px;
-    display: block;
     position: absolute;
-    background-color: lightgrey;
+    background-color: orangered;
     opacity: 0.5;
 }
 
 .edge-vertical-big {
-    width:40px;
+    width: 40px;
     height: 70px;
-    display: block;
-    border: 1px solid red;
     position: absolute; 
-    background-color: yellow;
-
+    background-color: #efe;
+    opacity: 0.8;
 }
 
 .edge-horizontal-big {
     width:70px;
     height: 40px;
-    display: block;
-    border: 1px solid red;
     position: absolute;  
-    background-color: yellow;
-
+    background-color: #efe;
+    opacity: 0.8;
 }
 
 .edge-square {
     width:40px;
     height: 40px;
-    display: block;
-    border: 1px solid red;
     position: absolute; 
     background-color: orange;
     opacity: 0.2;
@@ -155,83 +170,100 @@
 .edge-square-invisible {
     width:40px;
     height: 40px;
-    display: block;
     position: absolute;  
-    background-color: yellow;  
+    background-color: #efe; 
+    opacity: 0.8;
 }
 
 .top-in-vertical {
     transform: rotateX(90deg) translateZ(20px);   
+    -webkit-transform: rotateX(90deg) translateZ(20px);   
 }
 .bottom-in-vertical {
     transform: rotateX(-90deg) translateZ(50px);   
+    -webkit-transform: rotateX(-90deg) translateZ(50px);   
 }
 
 .left-in-vertical {
     transform: rotateY(-90deg) translateZ(20px);       
+    -webkit-transform: rotateY(-90deg) translateZ(20px);       
 }
 
 .right-in-vertical {
     transform: rotateY(90deg) translateZ(20px);    
+    -webkit-transform: rotateY(90deg) translateZ(20px);    
 }
 
 .front-in-vertical {
-      transform: rotateY( 0deg )translateZ(20px);  
+    transform: rotateY(0deg) translateZ(20px);  
+    -webkit-transform: rotateY(0deg) translateZ(20px);  
 }
+
 .back-in-vertical {
-      transform: rotateY( 180deg )translateZ(20px);  
+    transform: rotateY(180deg) translateZ(20px);  
+    -webkit-transform: rotateY(180deg) translateZ(20px);  
 }
 
 .top-in-horizontal {
     transform: rotateX(90deg) translateZ(20px);   
+    -webkit-transform: rotateX(90deg) translateZ(20px);   
 }
+
 .bottom-in-horizontal {
     transform: rotateX(-90deg) translateZ(20px);   
+    -webkit-transform: rotateX(-90deg) translateZ(20px);   
 }
 
 .left-in-horizontal {
     transform: rotateY(-90deg) translateZ(20px);       
+    -webkit-transform: rotateY(-90deg) translateZ(20px);       
 }
 
 .right-in-horizontal {
     transform: rotateY(90deg) translateZ(50px);    
+    -webkit-transform: rotateY(90deg) translateZ(50px);    
 }   
 
 .front-in-horizontal {
-      transform: rotateX( 0deg ) translateZ(20px);  
+    transform: rotateX(0deg) translateZ(20px);  
+    -webkit-transform: rotateX(0deg) translateZ(20px);  
 }
+
 .back-in-horizontal {
-      transform: rotateX( 180deg )translateZ(20px);  
+    transform: rotateX(180deg) translateZ(20px);  
+    -webkit-transform: rotateX(180deg) translateZ(20px);  
 }
 
 .front-outer-cube {
-    transform: rotateY(   0deg ) translateZ( 92px );   
+    transform: rotateY(0deg) translateZ(90px);   
+    -webkit-transform: rotateY(0deg) translateZ(90px);   
 }
 
 .back-outer-cube {
-    transform: rotateX( 180deg ) translateZ( 92px );
+    transform: rotateX(180deg) translateZ(90px);
+    -webkit-transform: rotateX(180deg) translateZ(90px);
 }
 
 .top-outer-cube {
-    transform: translateZ( -94px ) translateX(0px) translateY(0px) rotateX(  90deg ); ;
+    transform: translateZ(-90px) translateX(0px) translateY(0px) rotateX(90deg);
+    -webkit-transform: translateZ(-90px) translateX(0px) translateY(0px) rotateX(90deg);
 }
 
 .bottom-outer-cube {
-    transform: translateZ( 94px ) translateX(0px) translateY(182px) rotateX(  -90deg ) ;
+    transform: translateZ(90px) translateX(0px) translateY(180px) rotateX(-90deg);
+    -webkit-transform: translateZ(90px) translateX(0px) translateY(180px) rotateX(-90deg);
 }
 
-.left-outer-cube {  
-    transform:  translateZ(-98px) translateX(-21px) rotateY(90deg); 
+.left-outer-cube {
+    transform: translateZ(-90px) translateX(80px) translateY(100px) rotateY(90deg) rotateZ(90deg);
+    transform-origin: 25% 25%;
+    -webkit-transform: translateZ(-90px) translateX(80px) translateY(100px) rotateY(90deg) rotateZ(90deg);
+    -webkit-transform-origin: 25% 25%;
 }
 
 .right-outer-cube {
-    transform:  translateZ(98px) translateX(-194px) rotateY(-90deg); 
+    transform: translateZ(90px) translateX(-100px) translateY(100px) rotateY(-90deg) rotateZ(90deg); 
+    transform-origin: 25% 25%;
+    -webkit-transform: translateZ(90px) translateX(-100px) translateY(100px) rotateY(-90deg) rotateZ(90deg); 
+    -webkit-transform-origin: 25% 25%;
 }
-
-.background-setting {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-}
-
-
